@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Tanbhir Abdullah - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- সমস্ত স্টাইল (CSS) এখানে --- */
+        
+        :root {
+            /* কালার ভ্যারিয়েবল (সহজে রঙ পরিবর্তন করার জন্য) */
+            --bg-color: #f4f7fa; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+            --card-color: #ffffff;
+            --text-primary: #1d263b; /* গাঢ় টেক্সট */
+            --text-secondary: #5a6a85;
+            --shadow: rgba(0, 0, 0, 0.08);
+            
+            /* ব্র্যান্ড কালার */
+            --telegram-start: #33a6e0;
+            --telegram-end: #0c85c2;
+            --facebook-start: #1877f2;
+            --facebook-end: #1765c4;
+            --whatsapp-start: #25d366;
+            --whatsapp-end: #12b450;
+            --mobile-start: #ff6b6b; /* আকর্ষনীয় লাল */
+            --mobile-end: #e63946;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* ফন্ট পরিবর্তন করা হলো */
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            color: var(--text-primary);
+        }
+
+        /* কন্টাক্ট কার্ড */
+        .container {
+            background-color: var(--card-color);
+            border-radius: 30px; /* আরও গোলাকার */
+            box-shadow: 0 10px 40px var(--shadow);
+            padding: 45px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid #eef2f7; /* হালকা বর্ডার */
+            animation: fadeInZoom 0.8s ease-out forwards; /* নতুন অ্যানিমেশন */
+        }
+
+        @keyframes fadeInZoom {
+            from { 
+                opacity: 0; 
+                transform: scale(0.95); 
+            }
+            to { 
+                opacity: 1; 
+                transform: scale(1); 
+            }
+        }
+
+        /* লোগো/প্রোফাইল ছবি */
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* বাউন্সি ট্রানজিশন */
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(6deg);
+        }
+
+        /* নাম */
+        h1 {
+            font-size: 2.1rem; /* বড় স্ক্রিনের জন্য ফন্ট সাইজ */
+            color: var(--text-primary);
+            margin: 15px 0 5px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            white-space: nowrap; /* নামটি এক লাইনে রাখার জন্য */
+        }
+
+        /* সাবটাইটেল */
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 35px; /* লিঙ্ক থেকে দূরত্ব বাড়ানো হলো */
+            font-weight: 500;
+        }
+
+        /* লিংক বাটনগুলোর সাধারণ স্টাইল */
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* আইকন ও টেক্সট বাম থেকে শুরু */
+            color: #ffffff;
+            padding: 16px 25px; /* প্যাডিং ঠিক করা হলো */
+            margin-bottom: 20px;
+            border-radius: 16px; /* সুন্দর গোলাকার বাটন */
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden; /* হোভার ইফেক্টের জন্য */
+        }
+        
+        .link-button i {
+            margin-right: 15px;
+            font-size: 1.3rem;
+            width: 30px; /* আইকনের জন্য নির্দিষ্ট জায়গা */
+            text-align: center;
+        }
+
+        .link-button span {
+            flex-grow: 1;
+            text-align: center; /* টেক্সট মাঝখানে থাকবে */
+            margin-right: 30px; /* আইকনের জায়গার ব্যালেন্স করার জন্য */
+        }
+        
+        /* হোভার ইফেক্ট */
+        .link-button:hover {
+            transform: translateY(-4px) scale(1.02); /* উপরে উঠবে এবং জুম হবে */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* শ্যাডো বাড়বে */
+        }
+        
+        .link-button:active {
+            transform: translateY(-1px) scale(0.98); /* ক্লিক ইফেক্ট */
+        }
+
+        /* প্রতিটি বাটনের জন্য নতুন আকর্ষণীয় রঙ */
+        .telegram {
+            background: linear-gradient(135deg, var(--telegram-start), var(--telegram-end));
+        }
+
+        .facebook {
+            background: linear-gradient(135deg, var(--facebook-start), var(--facebook-end));
+        }
+
+        .whatsapp {
+            background: linear-gradient(135deg, var(--whatsapp-start), var(--whatsapp-end));
+        }
+        
+        .mobile {
+            background: linear-gradient(135deg, var(--mobile-start), var(--mobile-end));
+        }
+
+        /* মোবাইল নাম্বারের উপরের লেখা */
+        .mobile-section {
+            margin-top: 25px;
+        }
+        
+        .urgent-text {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--mobile-end);
+            background-color: #fdeded; /* হালকা লাল ব্যাকগ্রাউন্ড */
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* রেসপনসিভনেস */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+                margin: 10px;
+            }
+            h1 {
+                /* ছোট স্ক্রিনে নামটি ফিট করার জন্য ফন্ট সাইজ কমানো হলো */
+                font-size: 1.6rem; 
+            }
+            .logo {
+                width: 110px;
+                height: 110px;
+            }
+            .link-button {
+                padding: 14px 20px;
+                font-size: 1rem;
+                margin-bottom: 16px;
+            }
+            .link-button i {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="logo-container">
+            <img class="logo" src="https://i.ibb.co/YFmt8jS9/IMG-20251019-083512-983.jpg" alt="Md Tanbhir Abdullah Logo">
+        </div>
+        
+        <h1>Md Tanbhir Abdullah</h1>
+        
+        <p class="subtitle">my all social media is here</p>
+
+        <main class="links-section">
+            
+            <a href="https://t.me/tanbhir_official" class="link-button telegram" target="_blank">
+                <i class="fab fa-telegram"></i> 
+                <span>Telegram</span>
+            </a>
+            
+            <a href="https://www.facebook.com/profile.php?id=61582485689765" class="link-button facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i> 
+                <span>Facebook</span>
+            </a>
+            
+            <a href="https://wa.me/8801796202953" class="link-button whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> 
+                <span>WhatsApp</span>
+            </a>
+
+            <div class="mobile-section">
+                <p class="urgent-text">Urgent calls only 👇</p>
+                <a href="tel:01796202953" class="link-button mobile">
+                    <i class="fas fa-phone-volume"></i> 
+                    <span>Mobile</span>
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
